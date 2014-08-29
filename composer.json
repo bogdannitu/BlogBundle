@@ -1,5 +1,5 @@
 {
-    "name": "desarrolla2/blog-bundle",
+    "name": "tsslabs/blog-bundle",
     "type": "symfony-bundle",
     "description": "This Bundle provides a simple blog site features.",
     "keywords": ["blog", "cms"],
