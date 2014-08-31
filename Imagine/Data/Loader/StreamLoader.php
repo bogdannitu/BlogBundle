@@ -11,12 +11,11 @@
 namespace Desarrolla2\Bundle\BlogBundle\Imagine\Data\Loader;
 
 use Imagine\Image\ImagineInterface;
-use Liip\ImagineBundle\Imagine\Data\Loader\LoaderInterface;
 
 /**
  * StreamLoader
  */
-class StreamLoader implements LoaderInterface
+class StreamLoader
 {
 
     /**
