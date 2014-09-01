@@ -9,13 +9,15 @@
         <img src="/bundles/blog/img/social/facebook.png"/>
       </a>
     </li>
-    <li>
-      <a target="_blank"
-         href="{{ 'http://twitter.com/home?status=' ~ post | url_encode(true) ~ ' ' ~
-         url('_blog_view', { 'slug' : post.slug }) ~ ' via @' ~ twitter }}">
-        <img src="/bundles/blog/img/social/twitter.png"/>
-      </a>
-    </li>
+      {% if twitter is defined %}
+          <li>
+              <a target="_blank"
+                 href="{{ 'http://twitter.com/home?status=' ~ post | url_encode(true) ~ ' ' ~
+                 url('_blog_view', { 'slug' : post.slug }) ~ ' via @' ~ twitter }}">
+                  <img src="/bundles/blog/img/social/twitter.png"/>
+              </a>
+          </li>
+      {% endif %}
     <li>
       <a target="_blank"
          href="{{ 'https://plus.google.com/share?url=' ~  url('_blog_view', { 'slug' : post.slug }) }}">
