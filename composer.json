@@ -17,7 +17,6 @@
         "knplabs/knp-paginator-bundle": "2.4.*@dev",
         "gedmo/doctrine-extensions": "2.3.*",
         "gregwar/captcha-bundle": "1.0.*",
-        "friendsofsymfony/user-bundle": "~2.0@dev",
         "liip/imagine-bundle": "1.0.*@dev"
     },
     "suggest": {

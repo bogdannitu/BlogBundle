@@ -107,8 +107,12 @@ class PostController extends Controller
         $request = $this->getRequest();
         $em = $this->getDoctrine()->getManager();
 
-        $form = $this->createForm(new PostType(), new PostModel(new Post()));
-        $formHandler = new PostHandler($form, $request, new Post(), $em);
+        $post = new Post();
+
+        $post->setAuthorId($this->get('security.context')->getToken()->getUser()->getId());
+
+        $form = $this->createForm(new PostType(), new PostModel($post));
+        $formHandler = new PostHandler($form, $request, $post, $em);
         if ($formHandler->process()) {
             return $this->redirect($this->generateUrl('_blog_backend_post'));
         }

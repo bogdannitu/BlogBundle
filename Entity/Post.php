@@ -118,11 +118,11 @@ class Post
     protected $history;
 
     /**
-     * @var Author
+     * @var int $authorId
      *
-     * @ORM\ManyToOne(targetEntity="Author")
+     * @ORM\Column(name="author_id", type="integer")
      */
-    protected $author;
+    protected $authorId;
 
     /**
      * @var \DateTime $created_at
@@ -269,30 +269,6 @@ class Post
     public function getUpdatedAt()
     {
         return $this->updatedAt;
-    }
-
-    /**
-     * Set author
-     *
-     * @param Author $author
-     *
-     * @return Post
-     */
-    public function setAuthor(Author $author = null)
-    {
-        $this->author = $author;
-
-        return $this;
-    }
-
-    /**
-     * Get author
-     *
-     * @return Author
-     */
-    public function getAuthor()
-    {
-        return $this->author;
     }
 
     /**
@@ -662,5 +638,25 @@ class Post
     public function getVotes()
     {
         return $this->votes;
+    }
+
+    /**
+     * @param $authorId
+     *
+     * @return $this
+     */
+    public function setAuthorId($authorId)
+    {
+        $this->authorId = $authorId;
+
+        return $this;
+    }
+
+    /**
+     * @return int
+     */
+    public function getAuthorId()
+    {
+        return $this->authorId;
     }
 }
