@@ -56,7 +56,7 @@ class PostHistory
      *
      * @var Post
      *
-     * @ORM\ManyToOne(targetEntity="Post")
+     * @ORM\ManyToOne(targetEntity="Post", inversedBy="history")
      * @ORM\JoinColumn(name="post_id", referencedColumnName="id")
      */
     protected $post;

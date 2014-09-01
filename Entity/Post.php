@@ -98,7 +98,7 @@ class Post
     /**
      * @var \Doctrine\Common\Collections\Collection
      *
-     * @ORM\ManyToMany(targetEntity="Tag",inversedBy="tags")
+     * @ORM\ManyToMany(targetEntity="Tag",inversedBy="posts")
      * @ORM\JoinTable(name="post_tag")
      */
     protected $tags;
